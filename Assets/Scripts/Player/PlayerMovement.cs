@@ -5,7 +5,6 @@ namespace Player {
     public class PlayerMovement : MonoBehaviour {
         public static PlayerMovement instance;
 
-        // Animator Hashes
         private static readonly int magnitude = Animator.StringToHash("magnitude");
         private static readonly int jump = Animator.StringToHash("jump");
         private static readonly int yVelocity = Animator.StringToHash("yVelocity");
@@ -43,7 +42,6 @@ namespace Player {
 
         public bool canMove = true;
 
-        // Internal State
         private float horizontalMovement;
         private int jumpsRemaining;
         private bool isFacingRight = true;
@@ -57,7 +55,6 @@ namespace Player {
         private Rigidbody2D rb;
         private Animator anim;
 
-        // Collider buffer for non-alloc overlap checks
         private readonly Collider2D[] hitBuffer = new Collider2D[1];
 
         private void Awake() {
@@ -76,7 +73,6 @@ namespace Player {
             anim.SetBool(wallSlide, isWallSliding);
             anim.SetBool(grounded, isGrounded);
 
-            // detect walk-off ledge
             if (!isGrounded && wasGrounded && rb.linearVelocity.y <= 0) {
                 anim.SetTrigger(fall);
             }
@@ -151,13 +147,7 @@ namespace Player {
 
         private void GroundCheck() {
             #pragma warning disable CS0618 // Type or member is obsolete
-            int hits = Physics2D.OverlapBoxNonAlloc(
-                groundCheckPos.position,
-                groundCheckSize,
-                0,
-                hitBuffer,
-                groundLayer
-            );
+            int hits = Physics2D.OverlapBoxNonAlloc(groundCheckPos.position, groundCheckSize, 0, hitBuffer, groundLayer);
             #pragma warning restore CS0618 // Type or member is obsolete
             isGrounded = hits > 0;
             if (isGrounded) jumpsRemaining = maxJumps;
@@ -165,13 +155,7 @@ namespace Player {
 
         private bool WallCheck() {
             #pragma warning disable CS0618 // Type or member is obsolete
-            return Physics2D.OverlapBoxNonAlloc(
-                wallCheckPos.position,
-                wallCheckSize,
-                0,
-                hitBuffer,
-                wallLayer
-            ) > 0;
+            return Physics2D.OverlapBoxNonAlloc(wallCheckPos.position, wallCheckSize, 0, hitBuffer, wallLayer) > 0;
             #pragma warning restore CS0618 // Type or member is obsolete
         }
 

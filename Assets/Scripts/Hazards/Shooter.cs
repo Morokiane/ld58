@@ -11,7 +11,16 @@ namespace Hazards {
 
         private void Update() {
             if (currentCount <= 0 && foundPlayer) {
-                Instantiate(fireball, (new Vector2(transform.position.x, transform.position.y + 0.5f)), Quaternion.identity);
+                GameObject fb = Instantiate(fireball, (new Vector2(transform.position.x, transform.position.y + 0.5f)), Quaternion.identity);
+
+                if (transform.localScale.x < 0) {
+                    fb.GetComponent<Utils.Mover>().reverseDirection = true;
+                    
+                    Vector2 scale = fb.transform.localScale;
+                    scale.x *= -1;
+                    fb.transform.localScale = scale;
+                }
+
                 currentCount = countdown;
             }
         }

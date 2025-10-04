@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3180722882770379051}
   m_Layer: 0
   m_Name: Vein
-  m_TagString: Untagged
+  m_TagString: Vein
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 1225129591, guid: a3a44564fa32fd44d9623211ef0706c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -140,6 +140,6 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.029999368, y: 0.34637666}
+  m_Offset: {x: -0.029999368, y: 0.36}
   m_Size: {x: 0.8194414, y: 0.5700931}
   m_Direction: 1

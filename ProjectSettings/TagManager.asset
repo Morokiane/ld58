@@ -8,6 +8,7 @@ TagManager:
   - Vein
   - Ore
   - Wall
+  - Obstacle
   layers:
   - Default
   - TransparentFX

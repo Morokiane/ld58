@@ -14,7 +14,7 @@ namespace Utils {
         [Header("Movement speeds")]
         public float moveSpeed = 5;
         public bool matchPlayerSpeed;
-        [SerializeField] private bool reverseDirection;
+        public bool reverseDirection { get; set; }
         [Tooltip("Destroy the object instead of deactivating")]
         [SerializeField] private bool destroyObject;
         [SerializeField] private float destroyAt = -17;
@@ -36,11 +36,10 @@ namespace Utils {
         [Header("Bounds")]
         [Tooltip("Bounds that object can move within")]
         [SerializeField] private Vector2[] bounds;
-        // Only going to use this for one time enemies like bosses
 
         private float sineCenterY;
-        private Vector2 randomTarget; // Store the random target position
-        private bool hasRandomTarget; // Flag to check if random target is set
+        private Vector2 randomTarget; 
+        private bool hasRandomTarget; 
 
         private void Start() {
             switch (movementType) {
@@ -76,7 +75,6 @@ namespace Utils {
         // ReSharper disable Unity.PerformanceAnalysis
         private void StraightMovement(Vector2 pos) {
             if (!stop && movementType != MovementType.Pursue) {
-                // Regular movement logic
                 if (!matchPlayerSpeed) {
                     if (reverseDirection)
                         pos.x += moveSpeed * Time.fixedDeltaTime;
@@ -90,18 +88,16 @@ namespace Utils {
                     gameObject.SetActive(false);
                 }
 
-                transform.position = pos; // Update position as usual
+                transform.position = pos;
             } else {
                 if (!hasRandomTarget) {
                     randomTarget = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
                     hasRandomTarget = true;
                 }
-                // Move towards a specific position when "stop" is enabled
+
                 transform.position = Vector2.MoveTowards(transform.position, randomTarget, moveSpeed * Time.fixedDeltaTime);
 
-                // Optionally, check if the enemy has reached the target position
                 if (Vector2.Distance(transform.position, randomTarget) < 0.1f) {
-                    // You can trigger further actions here once the enemy reaches the position
                     Debug.Log("Enemy reached target position.");
                     hasRandomTarget = false;
                     moveSpeed = 0;
