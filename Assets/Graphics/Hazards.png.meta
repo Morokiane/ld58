@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: a3a44564fa32fd44d9623211ef0706c3
+guid: 7281f5769a5c12c4cba2e55be3a4a969
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3219194150997821500
-    second: Vein_0
+      213: 8920613511714713093
+    second: Hazards_0
+  - first:
+      213: 1339525120921777503
+    second: Hazards_1
+  - first:
+      213: -806643579872500256
+    second: Hazards_2
+  - first:
+      213: 1610301638950411484
+    second: Hazards_3
+  - first:
+      213: 1889197957760255985
+    second: Hazards_4
+  - first:
+      213: -6522638216353448274
+    second: Hazards_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Vein_0
+      name: Hazards_0
       rect:
         serializedVersion: 2
         x: 0
@@ -113,19 +128,41 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 55c5c161124fa8047a38450ec54cbed7
-      internalID: 1225129591
+      spriteID: 50e2e48b9b26ccb70800000000000000
+      internalID: 8920613511714713093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vein_1
+      name: Hazards_1
       rect:
         serializedVersion: 2
         x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5531481003f69210800000000000000
+      internalID: 1339525120921777503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hazards_2
+      rect:
+        serializedVersion: 2
+        x: 32
         y: 0
         width: 16
         height: 16
@@ -135,10 +172,54 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 81c847cc05c9a904298170a76e33b75e
-      internalID: 1891868660
+      spriteID: 0e5a95910f93ec4f0800000000000000
+      internalID: -806643579872500256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hazards_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc5ed21fc0f85610800000000000000
+      internalID: 1610301638950411484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hazards_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f781be7887c73a10800000000000000
+      internalID: 1889197957760255985
       vertices: []
       indices: 
       edges: []
@@ -147,7 +228,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: f1be9e18d6e662041a6d416b79b3a50d
     internalID: 0
     vertices: []
     indices: 
@@ -157,10 +238,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Vein_0: 1225129591
-      Vein_1: 1891868660
+      Hazards_0: 8920613511714713093
+      Hazards_1: 1339525120921777503
+      Hazards_2: -806643579872500256
+      Hazards_3: 1610301638950411484
+      Hazards_4: 1889197957760255985
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

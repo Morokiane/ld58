@@ -2,7 +2,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace  Player {
-    public class Player : Controllers.Singleton<Player> {
+    public class Player : MonoBehaviour {
+        public static Player instance;
         private static readonly int mining = Animator.StringToHash("mining");
 
         [SerializeField] private GameObject pick;
@@ -11,8 +12,12 @@ namespace  Player {
 
         private Animator anim;
 
-        protected override void Awake() {
-            base.Awake();
+        private void Awake() {
+            if (instance == null) {
+                instance = this;
+            } else {
+                Destroy(gameObject);
+            }
 
             anim = GetComponent<Animator>();
             pick.SetActive(false);
@@ -33,6 +38,7 @@ namespace  Player {
             }
         }
 
+        // These are called from the animator
         public void ActivatePick() {
             pick.SetActive(true);
         }
