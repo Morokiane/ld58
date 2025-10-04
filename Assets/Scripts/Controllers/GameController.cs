@@ -11,6 +11,10 @@ namespace Controllers {
                 Destroy(gameObject);
             }
         }
+
+        public void ExitGame() {
+            Application.Quit();
+        }
     }    
 
 }

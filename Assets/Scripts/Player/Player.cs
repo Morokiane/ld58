@@ -7,10 +7,13 @@ namespace  Player {
         private static readonly int mining = Animator.StringToHash("mining");
 
         [SerializeField] private GameObject pick;
+        [SerializeField] private uint maxWeight = 50;
 
         private bool isMining;
+        public uint currentWeight;
 
         private Animator anim;
+        private Utils.Flash flash;
 
         private void Awake() {
             if (instance == null) {
@@ -20,7 +23,14 @@ namespace  Player {
             }
 
             anim = GetComponent<Animator>();
+            flash = GetComponent<Utils.Flash>();
+            
             pick.SetActive(false);
+        }
+
+        private void Start() {
+            currentWeight = maxWeight;
+            Debug.Log("Player weight " + currentWeight);
         }
 
         public void Mining(InputAction.CallbackContext context) {
@@ -36,6 +46,13 @@ namespace  Player {
                 PlayerMovement.instance.canMove = true;
                 anim.SetBool(mining, isMining);
             }
+        }
+
+        public void DamagePlayer(uint _damage) {
+            currentWeight -= _damage;
+            StartCoroutine(flash.FlashRoutine());
+            Utils.ScreenShake.instance.ShakeScreen();
+            Controllers.HUDController.instance.UpdateWeight();
         }
 
         // These are called from the animator

@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1140228896909610384}
-  - component: {fileID: 8816735330247093566}
+  - component: {fileID: -6768459009796851328}
   - component: {fileID: 9034274961147864113}
+  - component: {fileID: 6228648446855485744}
   - component: {fileID: 3585161576101198423}
   - component: {fileID: 1035427518243166895}
   - component: {fileID: 2271830225074120096}
@@ -37,7 +38,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8816735330247093566
+--- !u!114 &-6768459009796851328
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,9 +47,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1417786294947451680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20adf380439f9a347b86e819c6b608ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 8baf29b2eef84384097b5b3a0254f68c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Hazards.Fireball
+  m_EditorClassIdentifier: Assembly-CSharp::Utils.DamagePlayer
+  damageAmount: 2
 --- !u!114 &9034274961147864113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +64,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Utils.Destroy
   damage: 2
+--- !u!114 &6228648446855485744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417786294947451680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb86f7b1b2aa3d46b036439ac8a86fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Utils.Flash
+  whiteFlashMat: {fileID: 2100000, guid: 7fe0b991eccd00540b12cd2ce4ec1180, type: 2}
+  restoreDefaultMatTime: 0.2
 --- !u!114 &3585161576101198423
 MonoBehaviour:
   m_ObjectHideFlags: 0
