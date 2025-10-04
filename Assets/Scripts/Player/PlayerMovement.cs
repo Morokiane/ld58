@@ -3,6 +3,12 @@ using UnityEngine.InputSystem;
 
 namespace Player {
     public class PlayerMovement : MonoBehaviour {
+        public static PlayerMovement instance;
+        private static readonly int magnitude = Animator.StringToHash("magnitude");
+        private static readonly int jump = Animator.StringToHash("jump");
+        private static readonly int yVelocity = Animator.StringToHash("yVelocity");
+        private static readonly int wallSlide = Animator.StringToHash("wallSlide");
+        private static readonly int grounded = Animator.StringToHash("grounded");
 
         [SerializeField] private float moveSpeed = 5f;
         [Header("Jump Settings")]
@@ -28,7 +34,9 @@ namespace Player {
         [SerializeField] private float baseGravity = 2;
         [SerializeField] private float maxFallSpeed = 18f;
         [SerializeField] private float fallSpeedMulti = 2f;
-        
+
+        public bool canMove = true;
+
         private float horizontalMovement;
         private int jumpsRemaining;
         private bool isFacingRight = true;
@@ -37,16 +45,26 @@ namespace Player {
         private bool isWallJumping;
         private float wallJumpDirection;
         private float wallJumpTimer;
+        private bool isMining;
         
         private Rigidbody2D rb;
-        
-        private void Start() {
+        private Animator anim;
+
+        private void Awake() {
+            instance = this;
+
             rb = GetComponent<Rigidbody2D>();
+            anim = GetComponent<Animator>();
         }
 
         private void Update() {
-        
+            float speed = Mathf.Abs(rb.linearVelocity.x);
+            anim.SetFloat(magnitude, speed);
+            anim.SetFloat(yVelocity, rb.linearVelocity.y);
+            anim.SetBool(wallSlide, isWallSliding);
+            anim.SetBool(grounded, isGrounded);
         }
+
 
         private void FixedUpdate() {
             GroundCheck();
@@ -54,7 +72,7 @@ namespace Player {
             WallSlide();
             WallJump();
 
-            if (!isWallJumping) {
+            if (!isWallJumping && canMove) {
                 rb.linearVelocity = new Vector2(horizontalMovement * moveSpeed, rb.linearVelocity.y);
                 Flip();
             }
@@ -87,17 +105,20 @@ namespace Player {
             if (context.performed && jumpsRemaining > 0) {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
                 jumpsRemaining--;
-            } else if (context.canceled) {
+                anim.SetTrigger(jump); // only once, on performed
+            }
+            else if (context.canceled && rb.linearVelocity.y > 0) {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
-                jumpsRemaining--;
             }
 
+            // Wall jump logic stays the same, just don’t trigger extra anims
             if (context.performed && wallJumpTimer > 0f) {
                 isWallJumping = true;
                 rb.linearVelocity = new Vector2(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
                 wallJumpTimer = 0;
+                anim.SetTrigger(jump);
 
-                if (transform.localScale.x != wallJumpDirection) {
+                if (!Mathf.Approximately(transform.localScale.x, wallJumpDirection)) {
                     isFacingRight = !isFacingRight;
                     Vector2 ls = transform.localScale;
                     ls.x *= -1f;
@@ -107,6 +128,7 @@ namespace Player {
                 Invoke(nameof(CancelWallJump), wallJumpTime + 0.1f);
             }
         }
+
 
         private void GroundCheck() {
             if (Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0, groundLayer)) {
