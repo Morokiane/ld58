@@ -11,13 +11,15 @@ namespace Player {
         private static readonly int yVelocity = Animator.StringToHash("yVelocity");
         private static readonly int wallSlide = Animator.StringToHash("wallSlide");
         private static readonly int grounded = Animator.StringToHash("grounded");
+        private static readonly int fall = Animator.StringToHash("fall");
 
         [Header("Movement Settings")]
-        [SerializeField] private float moveSpeed = 5f;
+        public float moveSpeed = 5f;
+        public float maxMoveSpeed { get; set; }= 5f;
 
         [Header("Jump Settings")]
-        [SerializeField] private float jumpPower = 5f;
-        [SerializeField] private int maxJumps = 2;
+        public float jumpPower = 5f;
+        public int maxJumps = 2;
 
         [Header("Ground Check")]
         [SerializeField] private Transform groundCheckPos;
@@ -35,9 +37,9 @@ namespace Player {
         [SerializeField] private Vector2 wallJumpPower = new Vector2(5f, 10f);
 
         [Header("Gravity Settings")]
-        [SerializeField] private float baseGravity = 2f;
-        [SerializeField] private float maxFallSpeed = 18f;
-        [SerializeField] private float fallSpeedMulti = 2f;
+        [SerializeField] private float baseGravity = 1f;
+        public float maxFallSpeed = 10f;
+        public float fallSpeedMulti = 2f;
 
         public bool canMove = true;
 
@@ -50,6 +52,7 @@ namespace Player {
         private bool isWallJumping;
         private float wallJumpDirection;
         private float wallJumpTimer;
+        private bool wasGrounded;
 
         private Rigidbody2D rb;
         private Animator anim;
@@ -63,12 +66,22 @@ namespace Player {
             anim = GetComponent<Animator>();
         }
 
+        private void Start() {
+            moveSpeed = maxMoveSpeed;
+        }
+
         private void Update() {
-            // Handle animations only (lightweight)
             anim.SetFloat(magnitude, Mathf.Abs(rb.linearVelocity.x));
             anim.SetFloat(yVelocity, rb.linearVelocity.y);
             anim.SetBool(wallSlide, isWallSliding);
             anim.SetBool(grounded, isGrounded);
+
+            // detect walk-off ledge
+            if (!isGrounded && wasGrounded && rb.linearVelocity.y <= 0) {
+                anim.SetTrigger(fall);
+            }
+
+            wasGrounded = isGrounded;
         }
 
         private void FixedUpdate() {
@@ -104,7 +117,6 @@ namespace Player {
             }
         }
 
-        // Input callbacks
         public void Move(InputAction.CallbackContext context) {
             horizontalMovement = context.ReadValue<Vector2>().x;
         }
@@ -138,7 +150,7 @@ namespace Player {
         }
 
         private void GroundCheck() {
-        #pragma warning disable CS0618 // Type or member is obsolete
+            #pragma warning disable CS0618 // Type or member is obsolete
             int hits = Physics2D.OverlapBoxNonAlloc(
                 groundCheckPos.position,
                 groundCheckSize,
@@ -146,13 +158,13 @@ namespace Player {
                 hitBuffer,
                 groundLayer
             );
-        #pragma warning restore CS0618 // Type or member is obsolete
+            #pragma warning restore CS0618 // Type or member is obsolete
             isGrounded = hits > 0;
             if (isGrounded) jumpsRemaining = maxJumps;
         }
 
         private bool WallCheck() {
-        #pragma warning disable CS0618 // Type or member is obsolete
+            #pragma warning disable CS0618 // Type or member is obsolete
             return Physics2D.OverlapBoxNonAlloc(
                 wallCheckPos.position,
                 wallCheckSize,
@@ -160,7 +172,7 @@ namespace Player {
                 hitBuffer,
                 wallLayer
             ) > 0;
-        #pragma warning restore CS0618 // Type or member is obsolete
+            #pragma warning restore CS0618 // Type or member is obsolete
         }
 
         private void WallSlide() {

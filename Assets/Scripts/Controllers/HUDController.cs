@@ -22,7 +22,6 @@ namespace Controllers {
 
         public void UpdateWeight() {
             fillBar.value = Player.Player.instance.currentWeight;
-            Debug.Log("HUD " + Player.Player.instance.currentWeight);
         }
 
         private IEnumerator DelayUpdate() {
