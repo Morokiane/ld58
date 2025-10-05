@@ -9,9 +9,11 @@ namespace Objects {
         private uint coinAmount;
 
         private SpriteRenderer spriteRenderer;
+        private CircleCollider2D circleCollider2D;
 
         private void Start() {
             spriteRenderer = GetComponent<SpriteRenderer>();
+            circleCollider2D = GetComponent<CircleCollider2D>();
 
             coinAmount = (uint)Random.Range(5, 15);
         }
@@ -24,6 +26,7 @@ namespace Objects {
                     Instantiate(coin, new Vector2(transform.position.x, transform.position.y + 0.5f), Quaternion.identity);
                 }
                 spriteRenderer.sprite = sprite;
+                circleCollider2D.enabled = false;
             }
         }
     }
