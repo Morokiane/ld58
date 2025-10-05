@@ -18,7 +18,7 @@ namespace Player {
 
         [Header("Jump Settings")]
         public float jumpPower = 5f;
-        public int maxJumps = 2;
+        public int maxJumps = 1;
 
         [Header("Ground Check")]
         [SerializeField] private Transform groundCheckPos;
@@ -39,6 +39,9 @@ namespace Player {
         [SerializeField] private float baseGravity = 1f;
         public float maxFallSpeed = 10f;
         public float fallSpeedMulti = 2f;
+
+        [Header("SFX Settings")]
+        [SerializeField] private AudioClip jumpSFX;
 
         public bool canMove = true;
 
@@ -90,6 +93,7 @@ namespace Player {
                 rb.linearVelocity = new Vector2(horizontalMovement * moveSpeed, rb.linearVelocity.y);
                 Flip();
             }
+
         }
 
         private void ApplyGravity() {
@@ -123,12 +127,13 @@ namespace Player {
                     rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
                     jumpsRemaining--;
                     anim.SetTrigger(jump);
-                }
-                else if (wallJumpTimer > 0f) {
+                    AudioSource.PlayClipAtPoint(jumpSFX, transform.position, 2f);
+                } else if (wallJumpTimer > 0f) {
                     isWallJumping = true;
                     rb.linearVelocity = new Vector2(wallJumpDirection * wallJumpPower.x, wallJumpPower.y);
                     wallJumpTimer = 0;
                     anim.SetTrigger(jump);
+                    AudioSource.PlayClipAtPoint(jumpSFX, transform.position, 2f);
 
                     if (!Mathf.Approximately(transform.localScale.x, wallJumpDirection)) {
                         isFacingRight = !isFacingRight;
@@ -187,12 +192,12 @@ namespace Player {
             isWallJumping = false;
         }
 
-        private void OnDrawGizmos() {
+        /* private void OnDrawGizmosSelected() {
             if (groundCheckPos == null || wallCheckPos == null) return;
             Gizmos.color = Color.red;
             Gizmos.DrawWireCube(groundCheckPos.position, groundCheckSize);
             Gizmos.color = Color.blue;
             Gizmos.DrawWireCube(wallCheckPos.position, wallCheckSize);
-        }
+        } */
     }
 }

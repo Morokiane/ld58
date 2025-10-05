@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Utils.Ore
   weight: 1
+  collectSFX: {fileID: 8300000, guid: 0c913e174c5a8a54283664dd32830e31, type: 3}
 --- !u!114 &1438384754188793119
 MonoBehaviour:
   m_ObjectHideFlags: 0

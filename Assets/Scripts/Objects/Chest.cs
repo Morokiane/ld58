@@ -4,6 +4,7 @@ namespace Objects {
     public class Chest : MonoBehaviour {
         [SerializeField] private GameObject coin;
         [SerializeField] private Sprite sprite;
+        [SerializeField] private AudioClip coinsSFX;
 
         private bool isOpen;
         private uint coinAmount;
@@ -24,6 +25,7 @@ namespace Objects {
                     isOpen = true;
                     coinAmount--;
                     Instantiate(coin, new Vector2(transform.position.x, transform.position.y + 0.5f), Quaternion.identity);
+                    AudioSource.PlayClipAtPoint(coinsSFX, transform.position, 2f);
                 }
                 spriteRenderer.sprite = sprite;
                 circleCollider2D.enabled = false;

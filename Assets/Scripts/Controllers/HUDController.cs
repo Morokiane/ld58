@@ -1,12 +1,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 namespace Controllers {
     public class HUDController : MonoBehaviour {
         public static HUDController instance;
 
         [SerializeField] private Slider fillBar;
+        [SerializeField] private GameObject menu;
+
+        private bool menuOpen;
 
         private void Awake() {
             if (instance == null) {
@@ -17,6 +21,7 @@ namespace Controllers {
         }
         
         private void Start() {
+            menu.SetActive(false);
             StartCoroutine(DelayUpdate());
         }
 
@@ -27,6 +32,26 @@ namespace Controllers {
         private IEnumerator DelayUpdate() {
             yield return new WaitForSeconds(0.5f);
             UpdateWeight();
+        }
+
+        public void OpenMenu() {
+            if (!menuOpen) {
+                Player.PlayerMovement.instance.canMove = false;
+                menuOpen = true;
+                menu.SetActive(true);
+            } else {
+                Player.PlayerMovement.instance.canMove = true;
+                menuOpen = false;
+                menu.SetActive(false);
+            }
+        }
+
+        public void Continue() {
+            OpenMenu();
+        }
+
+        public void Leave() {
+            SceneManager.LoadScene("Scenes/Title");
         }
     }
 }

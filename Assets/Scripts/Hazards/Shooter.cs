@@ -5,6 +5,7 @@ namespace Hazards {
         [SerializeField] private GameObject fireball;
         [SerializeField] private float countdown;
         [SerializeField] private float countSpeed;
+        [SerializeField] private AudioClip shootSFX;
 
         private float currentCount;
         [HideInInspector] public bool foundPlayer;
@@ -12,10 +13,11 @@ namespace Hazards {
         private void Update() {
             if (currentCount <= 0 && foundPlayer) {
                 GameObject fb = Instantiate(fireball, (new Vector2(transform.position.x, transform.position.y + 0.5f)), Quaternion.identity);
-
+                AudioSource.PlayClipAtPoint(shootSFX, transform.position, 2f);
+                
                 if (transform.localScale.x < 0) {
                     fb.GetComponent<Utils.Mover>().reverseDirection = true;
-                    
+
                     Vector2 scale = fb.transform.localScale;
                     scale.x *= -1;
                     fb.transform.localScale = scale;

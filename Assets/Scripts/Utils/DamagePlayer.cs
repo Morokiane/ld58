@@ -12,7 +12,6 @@ public class DamagePlayer : MonoBehaviour {
         
         private void Damage(uint _damage) {
             Player.Player.instance.DamagePlayer(_damage);
-            Debug.Log("Damaged player for " + _damage);
         }
     }
 }

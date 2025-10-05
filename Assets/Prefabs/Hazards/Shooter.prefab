@@ -50,7 +50,7 @@ MonoBehaviour:
   fireball: {fileID: 1417786294947451680, guid: 964b9cb7b3702ef43b55cb45b2730c7c, type: 3}
   countdown: 10
   countSpeed: 5
-  playerDetector: {fileID: 0}
+  shootSFX: {fileID: 8300000, guid: 8180f7db5da547f49bfb664d0defb04f, type: 3}
   foundPlayer: 0
 --- !u!212 &338268268104694684
 SpriteRenderer:

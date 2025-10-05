@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Utils.Ore
   weight: 2
+  collectSFX: {fileID: 8300000, guid: 59d0b8318ec742b4ab6d11fe780e3219, type: 3}
 --- !u!212 &4169196227948075563
 SpriteRenderer:
   m_ObjectHideFlags: 0

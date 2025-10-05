@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Objects.Chest
   coin: {fileID: 1614479470238164209, guid: 21457b41b7b07bf4aaa3fecdb876a252, type: 3}
   sprite: {fileID: 1090188306, guid: e567591b38695aa468b32f6a92fd1694, type: 3}
+  coinsSFX: {fileID: 8300000, guid: 59d0b8318ec742b4ab6d11fe780e3219, type: 3}
 --- !u!212 &9175332459452388801
 SpriteRenderer:
   m_ObjectHideFlags: 0
