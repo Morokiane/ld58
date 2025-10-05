@@ -14,7 +14,7 @@ namespace Player {
 
         [Header("Movement Settings")]
         public float moveSpeed = 5f;
-        public float maxMoveSpeed { get; set; }= 5f;
+        public float maxMoveSpeed { get; private set; }= 5f;
 
         [Header("Jump Settings")]
         public float jumpPower = 5f;
@@ -33,7 +33,7 @@ namespace Player {
         [Header("Wall Movement")]
         [SerializeField] private float wallSlideSpeed = 2f;
         [SerializeField] private float wallJumpTime = 0.5f;
-        [SerializeField] private Vector2 wallJumpPower = new Vector2(5f, 10f);
+        public Vector2 wallJumpPower = new Vector2(5f, 10f);
 
         [Header("Gravity Settings")]
         [SerializeField] private float baseGravity = 1f;
@@ -192,12 +192,12 @@ namespace Player {
             isWallJumping = false;
         }
 
-        /* private void OnDrawGizmosSelected() {
+        private void OnDrawGizmos() {
             if (groundCheckPos == null || wallCheckPos == null) return;
             Gizmos.color = Color.red;
             Gizmos.DrawWireCube(groundCheckPos.position, groundCheckSize);
             Gizmos.color = Color.blue;
             Gizmos.DrawWireCube(wallCheckPos.position, wallCheckSize);
-        } */
+        }
     }
 }

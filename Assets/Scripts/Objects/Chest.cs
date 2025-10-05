@@ -1,7 +1,11 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Objects {
     public class Chest : MonoBehaviour {
+        [SerializeField] private uint minCoins = 5;
+        [SerializeField] private uint maxCoins = 15;
+        [Header("")]
         [SerializeField] private GameObject coin;
         [SerializeField] private Sprite sprite;
         [SerializeField] private AudioClip coinsSFX;
@@ -16,7 +20,7 @@ namespace Objects {
             spriteRenderer = GetComponent<SpriteRenderer>();
             circleCollider2D = GetComponent<CircleCollider2D>();
 
-            coinAmount = (uint)Random.Range(5, 15);
+            coinAmount = (uint)Random.Range(minCoins, maxCoins);
         }
 
         private void OnTriggerEnter2D(Collider2D _collision) {
@@ -30,6 +34,18 @@ namespace Objects {
                 spriteRenderer.sprite = sprite;
                 circleCollider2D.enabled = false;
             }
+        }
+
+        private IEnumerator Jiggle() {
+            Vector3 originalScale = transform.localScale;
+
+            transform.localScale = originalScale * 0.9f;
+            yield return new WaitForSeconds(0.05f);
+
+            transform.localScale = originalScale * 1.1f;
+            yield return new WaitForSeconds(0.05f);
+
+            transform.localScale = originalScale;
         }
     }
 }

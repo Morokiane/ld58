@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb4dfabea83c81444bfc60f97f418564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Objects.Vein
-  oreAmount: 0
+  minAmount: 2
+  maxAmount: 6
   ore: {fileID: 8795662200742116155, guid: f7f3dd7f294c50b46a7b308a486bbb7a, type: 3}
 --- !u!212 &132107934346071334
 SpriteRenderer:

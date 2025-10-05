@@ -4,7 +4,7 @@ namespace Utils {
     public class Exclaim : MonoBehaviour {
         public static Exclaim instance;
 
-        public bool exclaimActive { set; get; }
+        public bool exclaimActive { get; private set; }
         private SpriteRenderer sprite;
 
         private void Awake() {

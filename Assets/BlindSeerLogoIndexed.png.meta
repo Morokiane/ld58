@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: c8540aac180763f4d9ed7743ec7429a9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5083315686198648053
+    second: BlindSeerLogoIndexed_0
+  - first:
+      213: -4400415480668942919
+    second: BlindSeerLogoIndexed_1
+  - first:
+      213: 7913243238469613915
+    second: BlindSeerLogoIndexed_2
+  - first:
+      213: 5022934403292035103
+    second: BlindSeerLogoIndexed_3
+  - first:
+      213: -7320399829732441876
+    second: BlindSeerLogoIndexed_4
+  - first:
+      213: -528951851674194719
+    second: BlindSeerLogoIndexed_5
+  - first:
+      213: 6231269586758827812
+    second: BlindSeerLogoIndexed_6
+  - first:
+      213: 6147479218690480473
+    second: BlindSeerLogoIndexed_7
+  - first:
+      213: -8655443606147736336
+    second: BlindSeerLogoIndexed_8
+  - first:
+      213: -4199916048730568525
+    second: BlindSeerLogoIndexed_9
+  - first:
+      213: -7046783092621149857
+    second: BlindSeerLogoIndexed_10
+  - first:
+      213: 9128823421119652090
+    second: BlindSeerLogoIndexed_11
+  - first:
+      213: -2096137623197228232
+    second: BlindSeerLogoIndexed_12
+  - first:
+      213: -3850674238620102553
+    second: BlindSeerLogoIndexed_13
+  - first:
+      213: -4350504301891520103
+    second: BlindSeerLogoIndexed_14
+  - first:
+      213: 921289208470936562
+    second: BlindSeerLogoIndexed_15
+  - first:
+      213: 8510235936756593890
+    second: BlindSeerLogoIndexed_16
+  - first:
+      213: 3324812108705051465
+    second: BlindSeerLogoIndexed_17
+  - first:
+      213: 1950035958172631671
+    second: BlindSeerLogoIndexed_18
+  - first:
+      213: 4694746240837463840
+    second: BlindSeerLogoIndexed_19
+  - first:
+      213: -3583807049529546147
+    second: BlindSeerLogoIndexed_20
+  - first:
+      213: 2151376294837329024
+    second: BlindSeerLogoIndexed_21
+  - first:
+      213: 431078298221583177
+    second: BlindSeerLogoIndexed_22
+  - first:
+      213: 4718340553249557603
+    second: BlindSeerLogoIndexed_23
+  - first:
+      213: -8284578713774865214
+    second: BlindSeerLogoIndexed_24
+  - first:
+      213: -5277597310972600446
+    second: BlindSeerLogoIndexed_25
+  - first:
+      213: -770114436292802320
+    second: BlindSeerLogoIndexed_26
+  - first:
+      213: -3056477980218772604
+    second: BlindSeerLogoIndexed_27
+  - first:
+      213: 1573286955241344824
+    second: BlindSeerLogoIndexed_28
+  - first:
+      213: 76461739516040299
+    second: BlindSeerLogoIndexed_29
+  - first:
+      213: 2521686662773902741
+    second: BlindSeerLogoIndexed_30
+  - first:
+      213: -3621404282636964306
+    second: BlindSeerLogoIndexed_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 98
+        width: 19
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc9a0d1fa09b8640800000000000000
+      internalID: 5083315686198648053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 191
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bd099a4f659ee2c0800000000000000
+      internalID: -4400415480668942919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 94
+        width: 170
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b593e3a9ccc71dd60800000000000000
+      internalID: 7913243238469613915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_3
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 158
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f187f462a3c05b540800000000000000
+      internalID: 5022934403292035103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 169
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce0c7f6d327b86a90800000000000000
+      internalID: -7320399829732441876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_5
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 150
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ecaca9e719c8a8f0800000000000000
+      internalID: -528951851674194719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_6
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 143
+        width: 30
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42f747aacaae97650800000000000000
+      internalID: 6231269586758827812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_7
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 136
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 959542657cb305550800000000000000
+      internalID: 6147479218690480473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_8
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 40
+        width: 47
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fc532216efa1e780800000000000000
+      internalID: -8655443606147736336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_9
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 45
+        width: 74
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b8c3f41b96e6b5c0800000000000000
+      internalID: -4199916048730568525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_10
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 90
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f59761bdc1cc43e90800000000000000
+      internalID: -7046783092621149857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_11
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 71
+        width: 47
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af06a11f88810be70800000000000000
+      internalID: 9128823421119652090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_12
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 82
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8336ff000f509e2e0800000000000000
+      internalID: -2096137623197228232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_13
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 78
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7601d458e28af8ac0800000000000000
+      internalID: -3850674238620102553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_14
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 78
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99972fb2367ef93c0800000000000000
+      internalID: -4350504301891520103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_15
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 65
+        width: 23
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb9f4667a319cc00800000000000000
+      internalID: 921289208470936562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_16
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 45
+        width: 74
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e4f32dce7e6a1670800000000000000
+      internalID: 8510235936756593890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_17
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 76
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 943384c4ffa142e20800000000000000
+      internalID: 3324812108705051465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_18
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 45
+        width: 15
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7724e1a4f5bef0b10800000000000000
+      internalID: 1950035958172631671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_19
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 8
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02fa7bb05d6172140800000000000000
+      internalID: 4694746240837463840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_20
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 40
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5a204de972c34ec0800000000000000
+      internalID: -3583807049529546147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_21
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 40
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08c99f777593bdd10800000000000000
+      internalID: 2151376294837329024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_22
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 40
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b90e3ad6f7bf500800000000000000
+      internalID: 431078298221583177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_23
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 40
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36c82cdfbb9ea7140800000000000000
+      internalID: 4718340553249557603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_24
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 40
+        width: 13
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c4cfabad83470d80800000000000000
+      internalID: -8284578713774865214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_25
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 9
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28fdbe3253532c6b0800000000000000
+      internalID: -5277597310972600446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_26
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 8
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f80e5c10010055f0800000000000000
+      internalID: -770114436292802320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_27
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 7
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 483b14d88753595d0800000000000000
+      internalID: -3056477980218772604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_28
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 9
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83f8ae0762075d510800000000000000
+      internalID: 1573286955241344824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_29
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 9
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6413c60c85af0100800000000000000
+      internalID: 76461739516040299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_30
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 9
+        width: 73
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d8a79c8a4def220800000000000000
+      internalID: 2521686662773902741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlindSeerLogoIndexed_31
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 8
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2e6851fdff2ebdc0800000000000000
+      internalID: -3621404282636964306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BlindSeerLogoIndexed_0: 5083315686198648053
+      BlindSeerLogoIndexed_1: -4400415480668942919
+      BlindSeerLogoIndexed_10: -7046783092621149857
+      BlindSeerLogoIndexed_11: 9128823421119652090
+      BlindSeerLogoIndexed_12: -2096137623197228232
+      BlindSeerLogoIndexed_13: -3850674238620102553
+      BlindSeerLogoIndexed_14: -4350504301891520103
+      BlindSeerLogoIndexed_15: 921289208470936562
+      BlindSeerLogoIndexed_16: 8510235936756593890
+      BlindSeerLogoIndexed_17: 3324812108705051465
+      BlindSeerLogoIndexed_18: 1950035958172631671
+      BlindSeerLogoIndexed_19: 4694746240837463840
+      BlindSeerLogoIndexed_2: 7913243238469613915
+      BlindSeerLogoIndexed_20: -3583807049529546147
+      BlindSeerLogoIndexed_21: 2151376294837329024
+      BlindSeerLogoIndexed_22: 431078298221583177
+      BlindSeerLogoIndexed_23: 4718340553249557603
+      BlindSeerLogoIndexed_24: -8284578713774865214
+      BlindSeerLogoIndexed_25: -5277597310972600446
+      BlindSeerLogoIndexed_26: -770114436292802320
+      BlindSeerLogoIndexed_27: -3056477980218772604
+      BlindSeerLogoIndexed_28: 1573286955241344824
+      BlindSeerLogoIndexed_29: 76461739516040299
+      BlindSeerLogoIndexed_3: 5022934403292035103
+      BlindSeerLogoIndexed_30: 2521686662773902741
+      BlindSeerLogoIndexed_31: -3621404282636964306
+      BlindSeerLogoIndexed_4: -7320399829732441876
+      BlindSeerLogoIndexed_5: -528951851674194719
+      BlindSeerLogoIndexed_6: 6231269586758827812
+      BlindSeerLogoIndexed_7: 6147479218690480473
+      BlindSeerLogoIndexed_8: -8655443606147736336
+      BlindSeerLogoIndexed_9: -4199916048730568525
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

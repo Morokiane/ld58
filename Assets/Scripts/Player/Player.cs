@@ -14,6 +14,8 @@ namespace  Player {
         [SerializeField] private AudioClip hurtSFX;
         [SerializeField] private AudioClip trashSFX;
 
+        [SerializeField] private GameObject droppedItem;
+
         private bool isMining;
         public uint currentWeight;
 
@@ -58,6 +60,8 @@ namespace  Player {
                 Controllers.GameController.instance.amountTrashed++;
                 Controllers.HUDController.instance.UpdateWeight();
 
+                Instantiate(droppedItem, new Vector2(transform.position.x, transform.position.y + 0.5f), Quaternion.identity);
+
                 // Check to make sure the uint doesn't go to max value
                 // because of a negative value being calculated
                 if (currentWeight > 50) {
@@ -85,6 +89,7 @@ namespace  Player {
 
             playerMovement.moveSpeed = playerMovement.maxMoveSpeed * (1f - 0.5f * weightRatio);
             playerMovement.jumpPower = 5f * (1f - 0.5f * weightRatio);
+            playerMovement.wallJumpPower = new Vector2(5f, 5f * (1f - 0.5f * weightRatio));
         }
 
         private void ResetMovement() {
@@ -104,6 +109,7 @@ namespace  Player {
         }
 
         public void DeactivatePick() {
+            Debug.Log("Pick deactivated");
             pick.SetActive(false);
         }
     }
