@@ -9,14 +9,14 @@ namespace Utils {
             sprite = GetComponent<SpriteRenderer>();
         }
 
-        void OnTriggerEnter2D(Collider2D collision) {
-            if (collision.CompareTag("Vein")) {
+        void OnTriggerEnter2D(Collider2D _collision) {
+            if (_collision.CompareTag("Vein") || _collision.CompareTag("Chest")) {
                 sprite.enabled = true;
             } 
         }
 
-        void OnTriggerExit2D(Collider2D collision) {
-            if (collision.CompareTag("Vein")) {
+        void OnTriggerExit2D(Collider2D _collision) {
+            if (_collision.CompareTag("Vein") || _collision.CompareTag("Chest")) {
                 sprite.enabled = false;
             } 
         }

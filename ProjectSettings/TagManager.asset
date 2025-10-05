@@ -9,6 +9,7 @@ TagManager:
   - Ore
   - Wall
   - Obstacle
+  - Chest
   layers:
   - Default
   - TransparentFX

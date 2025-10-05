@@ -41,6 +41,7 @@ namespace  Player {
             } else if (context.canceled) {
                 isMining = false;
                 PlayerMovement.instance.canMove = true;
+                DeactivatePick(); // Just is case it fucks up
                 anim.SetBool(mining, isMining);
             }
         }
@@ -65,14 +66,11 @@ namespace  Player {
         }
 
         public void RecalcWeight() {
-            float weightPercent = currentWeight / 100f;
-            playerMovement.moveSpeed = playerMovement.maxMoveSpeed - weightPercent;
-            playerMovement.jumpPower = 5f - weightPercent;
-            // Untested, but did have this happen. If it happens now with this, will have to put this somewhere else
+            float weightRatio = currentWeight / 50f;
+            weightRatio = Mathf.Clamp01(weightRatio);
 
-            if (playerMovement.moveSpeed < 1) {
-                playerMovement.moveSpeed = playerMovement.maxMoveSpeed;
-            }
+            playerMovement.moveSpeed = playerMovement.maxMoveSpeed * (1f - 0.5f * weightRatio);
+            playerMovement.jumpPower = 5f * (1f - 0.5f * weightRatio);
         }
 
         private void ResetMovement() {

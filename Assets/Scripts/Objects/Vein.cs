@@ -10,7 +10,7 @@ namespace Objects {
             oreAmount = (uint)Random.Range(2, 6);
         }
 
-        void OnTriggerEnter2D(Collider2D collision) {
+        private void OnTriggerEnter2D(Collider2D collision) {
             if (collision.CompareTag("Pick")) {
                 if (oreAmount > 0) {
                     oreAmount--;
